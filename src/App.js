@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import "./App.css";
+import Header from "./Component/Header";
+import Main from "./Component/Main";
+import Cart from "./Component/Cart";
+import data from "./Data";
 
 function App() {
+  //Parent Component of the Shoping cart.
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className='row'>
+        <Main products={data} />
+        {/*We pass productlist from data.jd file as an prop to the main.js file*/}
+        <Cart />
+      </div>
+    </>
   );
 }
 
 export default App;
+
