@@ -3,7 +3,8 @@
 
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
+  const { countItems } = props;
   return (
     <div className='row center block'>
       <div>
@@ -12,7 +13,11 @@ const Header = () => {
         </a>
       </div>
       <div>
-        <a href='#/Cart'>Cart</a> <a href='#/SignIn'>Sign-In</a>
+        <a href='#/Cart'>
+          Cart{" "}
+          {countItems ? <button className='btn'>{countItems}</button> : " "}
+        </a>{" "}
+        <a href='#/SignIn'>Sign-In</a>
       </div>
     </div>
   );

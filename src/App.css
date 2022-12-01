@@ -21,6 +21,11 @@
 
 .col2 {
   flex: 1;
+  justify-content: s;
+}
+
+.col2.text-right {
+  text-align: right;
 }
 
 .block {
@@ -45,5 +50,10 @@ img.small {
   border: 1px solid black;
   cursor: pointer;
   background-color: #eab308;
+  margin: 5px;
+}
+
+.center {
+  text-align: center;
 }
 
